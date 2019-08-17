@@ -1,8 +1,10 @@
 # AppLaunchItemManager
-###Usage
+### Usage
+
 **First**,copy `lib` folder into your project.
 
 **Second**,use marco blow in anywhere you need to export
+
 ```
 DT_FUNCTION_EXPORT(key,name)(){
      //do your launch staff
