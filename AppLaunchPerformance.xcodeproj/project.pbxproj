@@ -16,6 +16,7 @@
 		55159C492306F67E00491E67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55159C482306F67E00491E67 /* main.m */; };
 		55159C532306F67E00491E67 /* AppLaunchPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55159C522306F67E00491E67 /* AppLaunchPerformanceTests.m */; };
 		55159C5E2306F67E00491E67 /* AppLaunchPerformanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55159C5D2306F67E00491E67 /* AppLaunchPerformanceUITests.m */; };
+		55159C6D2306FED200491E67 /* DTLauchItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55159C6C2306FED200491E67 /* DTLauchItemManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		55159C592306F67E00491E67 /* AppLaunchPerformanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLaunchPerformanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55159C5D2306F67E00491E67 /* AppLaunchPerformanceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLaunchPerformanceUITests.m; sourceTree = "<group>"; };
 		55159C5F2306F67E00491E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55159C6B2306FED200491E67 /* DTLauchItemManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTLauchItemManager.h; sourceTree = "<group>"; };
+		55159C6C2306FED200491E67 /* DTLauchItemManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTLauchItemManager.m; sourceTree = "<group>"; };
+		55159C6E2307CF5C00491E67 /* DTLaunchItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTLaunchItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				55159C442306F67E00491E67 /* LaunchScreen.storyboard */,
 				55159C472306F67E00491E67 /* Info.plist */,
 				55159C482306F67E00491E67 /* main.m */,
+				55159C822307EF3200491E67 /* lib */,
 			);
 			path = AppLaunchPerformance;
 			sourceTree = "<group>";
@@ -135,6 +140,16 @@
 				55159C5F2306F67E00491E67 /* Info.plist */,
 			);
 			path = AppLaunchPerformanceUITests;
+			sourceTree = "<group>";
+		};
+		55159C822307EF3200491E67 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				55159C6E2307CF5C00491E67 /* DTLaunchItem.h */,
+				55159C6B2306FED200491E67 /* DTLauchItemManager.h */,
+				55159C6C2306FED200491E67 /* DTLauchItemManager.m */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55159C3E2306F67D00491E67 /* ViewController.m in Sources */,
+				55159C6D2306FED200491E67 /* DTLauchItemManager.m in Sources */,
 				55159C382306F67D00491E67 /* AppDelegate.m in Sources */,
 				55159C492306F67E00491E67 /* main.m in Sources */,
 				55159C3B2306F67D00491E67 /* SceneDelegate.m in Sources */,

@@ -1,10 +1,16 @@
 #import "SceneDelegate.h"
+#import "DTLauchItemManager.h"
 
 @interface SceneDelegate ()
 
 @end
 
 @implementation SceneDelegate
+
+DT_FUNCTION_EXPORT(StgA,WECHAT)(){
+     NSLog(@"初始化微信");
+}
+
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
@@ -14,7 +20,7 @@
 }
 
 
-- (void)sceneDidDisconnect:(UIScene *)scene {
+- (void)sceneDidDisconnect:(UIScene *)scene  {
     // Called as the scene is being released by the system.
     // This occurs shortly after the scene enters the background, or when its session is discarded.
     // Release any resources associated with this scene that can be re-created the next time the scene connects.

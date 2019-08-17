@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DTLauchItemManager.h"
 
 @interface ViewController ()
 
@@ -19,5 +20,13 @@
     // Do any additional setup after loading the view.
 }
 
+DT_FUNCTION_EXPORT(StgA,WEIBO)(){
+    NSLog(@"初始化微博");
+}
+
+
+DT_FUNCTION_EXPORT(StgB,WriteCookie)(){
+    NSLog(@"写入cookie");
+}
 
 @end

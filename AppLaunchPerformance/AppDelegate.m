@@ -7,6 +7,34 @@
 //
 
 #import "AppDelegate.h"
+//#import <mach-o/loader.h>
+#import "DTLauchItemManager.h"
+
+
+@interface DTLauchItemManagerLog : NSObject<DTLauchItemManagerLogger>
+
+@end
+
+@implementation DTLauchItemManagerLog
+
+-(void)willLaunchForKey:(NSString *)key{
+    NSLog(@"%s key => %@",__func__,key);
+}
+
+-(void)didLaunchedForKey:(NSString *)key{
+    NSLog(@"%s key => %@",__func__,key);
+    NSLog(@"=========================");
+}
+
+-(void)willExcuteFunction:(NSString *)name forLaunchKey:(NSString *)key{
+    NSLog(@"%s key => %@ name => %@",__func__,key,name);
+}
+
+-(void)didExcutedFunction:(NSString *)name forLaunchKey:(NSString *)key{
+    NSLog(@"%s key => %@ name => %@",__func__,key,name);
+}
+
+@end
 
 @interface AppDelegate ()
 
@@ -14,15 +42,19 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[DTLauchItemManager sharedInstance] setLoger: [[DTLauchItemManagerLog alloc] init]];
+    [[DTLauchItemManager sharedInstance] launchForKey:@"StgA"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[DTLauchItemManager sharedInstance] launchForKey:@"StgB"];
+    });
+    
+    
+    
     return YES;
 }
 
-
 #pragma mark - UISceneSession lifecycle
-
 
 - (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
     // Called when a new scene session is being created.
